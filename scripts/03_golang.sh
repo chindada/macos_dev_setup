@@ -42,9 +42,9 @@ $GO install mvdan.cc/gofumpt@latest
 $GO install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest
 
 version="1.25.8"
-$GO install golang.org/dl/go$version@latest && go"$version" download
+$GO install golang.org/dl/go$version@latest && $HOME/go/bin/go"$version" download
 version="1.22.3"
-$GO install golang.org/dl/go$version@latest && go"$version" download
+$GO install golang.org/dl/go$version@latest && $HOME/go/bin/go"$version" download
 
 echo "Installing protoc..."
 version="34.1"
