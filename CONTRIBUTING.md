@@ -50,7 +50,7 @@ brew install git-chglog
 - new tag
 
 ```sh
-VERSION=2.1.0
+VERSION=2.1.1
 git tag -a v$VERSION -m $VERSION
 git push -u origin --all
 git push -u origin --tags

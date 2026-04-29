@@ -3,9 +3,11 @@ set -e
 
 echo "Installing golang..."
 
-# check if go is already installed
-if command -v go &>/dev/null; then
-  ENV_FILE=$(go env GOENV)
+GO=/usr/local/go/bin/go
+
+# check if $GO is already installed
+if command -v $GO &>/dev/null; then
+  ENV_FILE=$($GO env GOENV)
   DIRNAME=$(dirname $ENV_FILE)
   rm -rf $DIRNAME
 fi
@@ -33,16 +35,16 @@ else
   gsed -i "$ a $new_rc" ~/.zshrc
 fi
 
-go install github.com/git-chglog/git-chglog/cmd/git-chglog@latest
-go install github.com/appleboy/CodeGPT/cmd/codegpt@latest
-go install github.com/magefile/mage@latest
-go install mvdan.cc/gofumpt@latest
-go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest
+$GO install github.com/git-chglog/git-chglog/cmd/git-chglog@latest
+$GO install github.com/appleboy/CodeGPT/cmd/codegpt@latest
+$GO install github.com/magefile/mage@latest
+$GO install mvdan.cc/gofumpt@latest
+$GO install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest
 
 version="1.25.8"
-go install golang.org/dl/go$version@latest && go"$version" download
+$GO install golang.org/dl/go$version@latest && go"$version" download
 version="1.22.3"
-go install golang.org/dl/go$version@latest && go"$version" download
+$GO install golang.org/dl/go$version@latest && go"$version" download
 
 echo "Installing protoc..."
 version="34.1"
