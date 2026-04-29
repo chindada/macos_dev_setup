@@ -43,7 +43,6 @@ sudo /Volumes/Docker/Docker.app/Contents/MacOS/install --accept-license
 sudo hdiutil detach /Volumes/Docker
 rm -f Docker.dmg
 
-brew install --cask valentina-studio
 brew install --cask visual-studio-code
 brew install --cask iterm2
 brew install --cask postman

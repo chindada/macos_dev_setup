@@ -49,7 +49,7 @@ $HOME/sdk_tools/flutter/flutter/bin/dart --disable-analytics
 # https://rubygems.org/gems/activesupport
 
 echo "Installing cocoapods..."
-sudo gem install cocoapods
+sudo $(brew --prefix)/opt/ruby/bin/gem install cocoapods
 new_rc='export PATH=$HOME/.gem/bin:$PATH'
 if grep -q $new_rc ~/.zshrc; then
   echo "$new_rc already exists"
