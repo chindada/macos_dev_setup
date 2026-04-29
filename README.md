@@ -2,12 +2,12 @@
 
 [![MAINTAINED](https://img.shields.io/badge/Maintained-yes-green?style=for-the-badge&logo=appveyor)](https://github.com/Chindada/macos_dev_setup)
 [![RELEASE](https://img.shields.io/github/release/Chindada/macos_dev_setup?style=for-the-badge)](https://github.com/Chindada/macos_dev_setup/releases/latest)
-[![OS](https://img.shields.io/badge/macOS-15.1.1-orange?style=for-the-badge&logo=macOS&logoColor=violet)](https://www.apple.com/tw/macos)
+[![OS](https://img.shields.io/badge/macOS-26.4.1-orange?style=for-the-badge&logo=macOS&logoColor=violet)](https://www.apple.com/tw/macos)
 [![ARCH](https://img.shields.io/badge/Arch-arm64-silver?style=for-the-badge&logo=arm&logoColor=blue)](https://www.apple.com/tw/macos)
 
 ## **Caution: This script is only for Apple silicon architecture mac**
 
-![15.1.1](./assets/s009.png)
+![26.4.1](./assets/s010.png)
 
 ## **Project Structure**
 
@@ -58,7 +58,7 @@
 - In this case, base folder is `~/dev_projects`, you can change it to your own folder
 
   ```bash
-  VERSION=2.0.0
+  VERSION=2.1.0
   BASE_DIR=~/dev_projects
   ```
 
@@ -88,9 +88,9 @@
 ### **zsh**
 
 1. Launch iterm2, it will prompt to install MesloLGS font and initial powerlevel10k
-    - if no install font, exit and restart until iterm2 prompt to install font
+   - if no install font, exit and restart until iterm2 prompt to install font
 2. Paste `yyyy3121111121y1yy`
-    - The zsh will be like below
+   - The zsh will be like below
 
 ![ITERM2](./assets/s005.png)
 
@@ -98,13 +98,13 @@
 
 1. Run below commands
 
-    ```bash
-    sudo sh -c 'xcode-select -s /Applications/Xcode.app/Contents/Developer && xcodebuild -runFirstLaunch'
-    ```
+   ```bash
+   sudo sh -c 'xcode-select -s /Applications/Xcode.app/Contents/Developer && xcodebuild -runFirstLaunch'
+   ```
 
-    ```bash
-    sudo xcodebuild -license
-    ```
+   ```bash
+   sudo xcodebuild -license
+   ```
 
 2. Manual launch Xcode, let it finish the first initial
 
@@ -155,8 +155,9 @@
   ```
 
   > Note: The --apple-use-keychain option stores the passphrase in your keychain for you when you add an SSH key to the ssh-agent. If you chose not to add a passphrase to your key, run the command without the --apple-use-keychain option.
-  >> The --apple-use-keychain option is in Apple's standard version of ssh-add. In MacOS versions prior to Monterey (12.0), the --apple-use-keychain and --apple-load-keychain flags used the syntax -K and -A, respectively.
-  >> If you don't have Apple's standard version of ssh-add installed, you may receive an error. For more information, see "Error: ssh-add: illegal option -- K."
+  >
+  > > The --apple-use-keychain option is in Apple's standard version of ssh-add. In MacOS versions prior to Monterey (12.0), the --apple-use-keychain and --apple-load-keychain flags used the syntax -K and -A, respectively.
+  > > If you don't have Apple's standard version of ssh-add installed, you may receive an error. For more information, see "Error: ssh-add: illegal option -- K."
 
 ### **GPG Key**
 
