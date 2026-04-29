@@ -7,7 +7,7 @@ rm -rf $HOME/.pub-cache
 rm -rf $HOME/.dartServer
 
 echo "Installing flutter..."
-version=3.41.7
+version=3.41.8
 echo "Downloading flutter $version..."
 # check flutter.zip exists
 if [ -f "flutter_macos_arm64_$version-stable.zip" ]; then

@@ -6,7 +6,7 @@ sudo rm -rf $HOME/.npm
 sudo rm -rf $HOME/.npmrc
 
 echo "Installing node..."
-version=v24.14.1
+version=v24.15.0
 curl -fSL https://nodejs.org/dist/$version/node-$version.pkg --output node.pkg
 sudo installer -pkg ./node.pkg -target /
 rm -rf node.pkg
