@@ -1,11 +1,12 @@
 #!/bin/zsh
+set -e
 
 echo "Removing node config files..."
 sudo rm -rf $HOME/.npm
 sudo rm -rf $HOME/.npmrc
 
 echo "Installing node..."
-version=v22.11.0
+version=v24.14.1
 curl -fSL https://nodejs.org/dist/$version/node-$version.pkg --output node.pkg
 sudo installer -pkg ./node.pkg -target /
 rm -rf node.pkg
@@ -28,5 +29,6 @@ npm install -g pnpm
 
 npm install -g commitizen
 npm install -g cz-conventional-changelog
-npm install -g conventional-changelog-cli
 echo '{ "path": "cz-conventional-changelog" }' >~/.czrc
+
+npm install -g @google/gemini-cli

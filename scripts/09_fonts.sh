@@ -1,4 +1,5 @@
 #!/bin/zsh
+set -e
 
 setopt nullglob
 echo "Installing fonts..."

@@ -1,4 +1,5 @@
 #!/bin/zsh
+set -e
 
 echo "Installing powerlevel10k..."
 brew install romkatv/powerlevel10k/powerlevel10k

@@ -178,6 +178,7 @@ gpg --full-generate-key
   git config --global gpg.program gpg
   git config --global commit.gpgsign true
   git config --global tag.gpgSign true
+  git config --global advice.nameTooLong false
   ```
 
 - Test GPG sign

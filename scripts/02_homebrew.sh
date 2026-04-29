@@ -1,17 +1,8 @@
 #!/bin/zsh
+set -e
 
 echo "Installing homebrew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-arch -x86_64 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-echo 'if [[ "$(uname -m)" == "x86_64" ]]; then
-    eval "$(/usr/local/bin/brew shellenv)"
-elif [[ "$(uname -m)" == "arm64" ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)"
-fi
-' >~/.zprofile
-
-# use arm64 version to continue
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Install brew packages

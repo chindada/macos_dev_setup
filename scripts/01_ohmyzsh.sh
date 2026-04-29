@@ -1,4 +1,5 @@
 #!/bin/zsh
+set -e
 
 NEED_INSTALL=1
 if [[ -d "$HOME/.oh-my-zsh" ]]; then

@@ -1,4 +1,5 @@
 #!/bin/zsh
+set -e
 
 echo "Installing mas..."
 brew install mas

@@ -1,4 +1,5 @@
 #!/bin/zsh
+set -e
 
 echo "Installing golang..."
 
@@ -11,7 +12,7 @@ fi
 
 sudo rm -rf /usr/local/go
 sudo rm -rf $HOME/go
-version="1.23.3"
+version="1.26.2"
 curl -fSL https://go.dev/dl/go$version.darwin-arm64.pkg --output golang.pkg
 sudo installer -pkg ./golang.pkg -target /
 rm golang.pkg
@@ -32,8 +33,19 @@ else
   gsed -i "$ a $new_rc" ~/.zshrc
 fi
 
+go install github.com/git-chglog/git-chglog/cmd/git-chglog@latest
+go install github.com/appleboy/CodeGPT/cmd/codegpt@latest
+go install github.com/magefile/mage@latest
+go install mvdan.cc/gofumpt@latest
+go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@latest
+
+version="1.25.8"
+go install golang.org/dl/go$version@latest && go"$version" download
+version="1.22.3"
+go install golang.org/dl/go$version@latest && go"$version" download
+
 echo "Installing protoc..."
-version="28.3"
+version="34.1"
 curl -fSL https://github.com/protocolbuffers/protobuf/releases/download/v$version/protoc-$version-osx-aarch_64.zip --output protoc.zip
 rm -rf ~/sdk_tools/protoc
 mkdir -p ~/sdk_tools/protoc
